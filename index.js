@@ -3,6 +3,7 @@ import rutas from "./routes/rutas.js"
 
 const app = express()
 app.set("view engine", "ejs")
+app.use(express.urlencoded({ extended: true }));
 app.use("/", rutas)
 
 
