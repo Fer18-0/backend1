@@ -1,0 +1,22 @@
+
+<%- include ("templates/header.ejs") %> 
+  <h1 class="text-primary">Contactanos</h1>
+  <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+  <form action="/editarContacto" id="formulario" method="POST">
+    <input class="form-control mb-3" name="id" id=id type="hidden"  value="<%=contactosBD._id%>">
+    <label> Ingresa nombre:</label>
+    <input class="form-control mb-3" name="nombre" id=nombre type=text  value="<%=contactosBD.nombre%>">
+    <label> Ingresa edad:</label>
+    <input class="form-control mb-3" name="edad" id=edad type=text value="<%=contactosBD.edad%>">
+    <button id=datos type="submit" class="btn btn-primary"> Editar Contacto</button>
+
+  </form>
+
+<%- include ("templates/footer.ejs") %> 
+
